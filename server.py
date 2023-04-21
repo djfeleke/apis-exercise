@@ -42,7 +42,13 @@ def find_afterparties():
 
     url = 'https://app.ticketmaster.com/discovery/v2/events'
 
-    payload = {'apikey': "hK81CG3sGzxSmuf68fFldG5ewgmyNPAw", 'postalCode': '37204'}
+    payload = {'apikey': API_KEY, 
+               'keyword':keyword,
+               'postalCode': postalcode,
+               'radius':radius,
+               'unit':unit,
+               'sort':sort,
+               }
     
     res = requests.get(url, params=payload) 
 
